@@ -16,6 +16,6 @@ var tasks = requireDir('./tasks');
 /*-----------------------------------------------------------
  GULP : WATCH TASKS
 -----------------------------------------------------------*/
-gulp.task('default', ['watch', 'sass', 'browser-sync', 'js', 'sprite']);
+gulp.task('default', ['watch', 'browser-sync', 'sass', 'jade', 'js', 'sprite']);
 gulp.task('lint:scss', ['scss-lint']);
 gulp.task('build', ['sass', 'move', 'js']);

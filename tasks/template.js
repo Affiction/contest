@@ -7,7 +7,7 @@ var gulp = require('gulp'),
   gulpJade = require('gulp-jade'),
   debug = require('gulp-debug');
 
-gulp.task('template', function () {
+gulp.task('jade', function () {
   var YOUR_LOCALS = {};
 
   gulp.src('./app/jade/pages/*.jade')
