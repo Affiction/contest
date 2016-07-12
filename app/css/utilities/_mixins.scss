@@ -1,0 +1,79 @@
+// -------------------------------------------------------
+// Mixins styles
+// -------------------------------------------------------
+
+//retina
+@mixin image-2x($image) {
+  @media (min--moz-device-pixel-ratio: 1.3),
+  (-o-min-device-pixel-ratio: 2.6/2),
+  (-webkit-min-device-pixel-ratio: 1.3),
+  (min-device-pixel-ratio: 1.3),
+  (min-resolution: 1.3dppx) {
+    background-image: url($image);
+  }
+}
+
+@mixin sprite-retina($logo-path) {
+  @media (min--moz-device-pixel-ratio: 1.3),
+  (-o-min-device-pixel-ratio: 2.6/2),
+  (-webkit-min-device-pixel-ratio: 1.3),
+  (min-device-pixel-ratio: 1.3),
+  (min-resolution: 1.3dppx) {
+    @include sprite($logo-path);
+  }
+}
+
+// Clearfix
+%clearfix {
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+// Typography
+$type-scale-large: (
+  h1: 3.840rem,
+  h2: 2.250rem,
+  h3: 1.695rem,
+  h4: 1.193rem,
+  p: 1rem,
+  sm: .875rem,
+  xsm: .750rem,
+  );
+
+$type-scale-medium: (
+  h1: 3rem,
+  h2: 1.875rem,
+  h3: 1.500em,
+  h4: 1.125rem,
+  p: 1rem,
+  sm: .875rem,
+  xsm: .75rem,
+  );
+
+$type-scale-small: (
+  h1: 2.655rem,
+  h2: 1.659rem,
+  h3: 1.327rem,
+  h4: .996rem,
+  p: .880rem,
+  sm: .788rem,
+  xsm: .675rem,
+  );
+
+$breakpoint-medium: 47.9375rem;
+$breakpoint-small: 30rem;
+
+@mixin size($level) {
+  font-size: map-get($type-scale-large, $level);
+
+  @media (max-width: $breakpoint-medium) {
+    font-size: map-get($type-scale-medium, $level);
+  }
+
+  @media (max-width: $breakpoint-small) {
+    font-size: map-get($type-scale-small, $level);
+  }
+}

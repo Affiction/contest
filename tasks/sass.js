@@ -1,0 +1,48 @@
+/*-----------------------------------------------------------
+ GULP : SASS Task
+ -----------------------------------------------------------*/
+
+var gulp = require('gulp'),
+  sass = require('gulp-sass'),
+  concat = require('gulp-concat'),
+  autoprefixer = require('gulp-autoprefixer'),
+  pixrem = require('gulp-pixrem'),
+  minify_css = require('gulp-minify-css'),
+  rename = require("gulp-rename"),
+  plumber = require("gulp-plumber"),
+  sourcemaps = require('gulp-sourcemaps'),
+  scsslint = require('gulp-scss-lint'),
+  debug = require('gulp-debug');
+
+gulp.task('sass', function () {
+  gulp.src(['./app/css/styles.scss'])
+    .pipe(debug({title: 'scss:'}))
+    .pipe(plumber())
+    .pipe(sourcemaps.init())
+    .pipe(sass({
+      includePaths: ['scss'],
+      outputStyle: 'expanded'
+    }))
+    .pipe(autoprefixer('last 3 version'))
+    .pipe(pixrem({
+      rootValue: '16px'
+    }))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('./app/css'))
+    .pipe(concat('styles.css'))
+    .pipe(gulp.dest('./app/css/'))
+    .pipe(gulp.dest('./build/css/'))
+    .pipe(minify_css())
+    .pipe(sourcemaps.write())
+    .pipe(rename('styles.min.css'))
+    .pipe(gulp.dest('./app/css/'))
+    .pipe(gulp.dest('./build/css/'));
+});
+
+gulp.task('scss:lint', function () {
+  return gulp.src(['./app/css/**/*.scss', '!*/css/bourbon/**/*', '!*/css/**/*.css'])
+    .pipe(scsslint({
+        'config': '.scss-lint.yml'
+      })
+    );
+});
