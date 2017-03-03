@@ -7,7 +7,7 @@
   z-index: 10;
 
   &::after {
-    background-image: url('./../img/world-map.png') no-repeat;
+    background-image: url('../img/world-map.png') no-repeat;
     background-size: contain;
     content: '';
     display: block;
@@ -20,6 +20,6 @@
     width: 16.4rem;
     z-index: -1;
 
-    @include image-2x('../../img/world-map@2x.png');
+    @include image-2x('../img/world-map@2x.png');
   }
 }

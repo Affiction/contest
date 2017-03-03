@@ -40,19 +40,19 @@
     }
 
     &::before {
-      background-image: url('../../img/icon-quote-start.png');
+      background-image: url('../img/icon-quote-start.png');
       left: 0;
       top: 0;
 
-      @include image-2x('../../img/icon-quote-start@2x.png');
+      @include image-2x('../img/icon-quote-start@2x.png');
     }
 
     &::after {
-      background-image: url('../../img/icon-quote-end.png');
+      background-image: url('../img/icon-quote-end.png');
       bottom: 0;
       right: 0;
 
-      @include image-2x('../../img/icon-quote-end@2x.png');
+      @include image-2x('../img/icon-quote-end@2x.png');
     }
   }
 
