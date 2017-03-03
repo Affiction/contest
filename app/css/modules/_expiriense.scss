@@ -8,6 +8,10 @@
 
     &-left {
       padding-right: 3rem;
+
+      @include breakpoint(max-width $tablet) {
+        display: none;
+      }
     }
 
     &-info {

@@ -6,11 +6,19 @@
     padding-right: 1.5rem;
     position: relative;
     width: 29.3rem;
+
+    @include breakpoint(max-width $md) {
+      width: 100%;
+    }
   }
 
   &__content {
     float: right;
     padding-top: 3rem;
     width: calc(100% - 29.3rem);
+
+    @include breakpoint(max-width $md) {
+      width: 100%;
+    }
   }
 }

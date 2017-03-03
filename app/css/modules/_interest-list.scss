@@ -1,3 +1,5 @@
 .m-interest-list {
+  @include clearfix();
   margin-top: 1.5rem;
+
 }

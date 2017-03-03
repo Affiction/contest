@@ -3,6 +3,11 @@
   position: absolute;
   top: -13.2rem;
 
+  @include breakpoint(max-width $md) {
+    position: relative;
+    margin-bottom: -13.2rem;
+  }
+
   &__avatar-wrapper {
 
     .m-avatar {

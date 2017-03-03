@@ -1,8 +1,13 @@
 .m-distinguished-list {
 
+  @include breakpoint(max-width $md) {
+    text-align: left;
+  }
+
   &__item {
     display: inline-block;
     height: 6rem;
+    margin-bottom: 1.5rem;
     width: 6rem;
 
     &:not(:first-child) {
