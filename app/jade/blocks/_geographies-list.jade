@@ -1,0 +1,13 @@
+mixin m-geography-list
+
+  -
+    var countries = {
+      1: "North America",
+      2: "Latin America"
+    }
+
+  +b.m-geography-list
+    +b.UL.m-btn-list
+      each val, index in countries
+        +e.LI.item
+          +e.A(href="#").link= val

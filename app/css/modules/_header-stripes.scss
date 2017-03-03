@@ -1,0 +1,16 @@
+.m-header-stripes {
+  box-shadow: 0 1px 2px 0 rgba(31, 54, 77, .25);
+
+  &__item {
+
+    &--darken {
+      background-color: $charcoal-grey;
+      height: 2rem;
+    }
+
+    &--lighter {
+      background-color: $white-two;
+      height: 4.4rem;
+    }
+  }
+}

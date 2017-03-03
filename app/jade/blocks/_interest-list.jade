@@ -1,0 +1,37 @@
+mixin m-interest-list
+
+  -
+    var list = {
+      1: "Relative Value",
+      2: "Education",
+      3: "Emerging Markets",
+      4: "Multi-Asset",
+      5: "Small Cap",
+      6: "Macro",
+      7: "Market Neutral Arbitrage",
+      8: "Fixed Income",
+      9: "Emerging Managers",
+      10: "Asset Allocation",
+      11: "Asset Allocation",
+      12: "Multi-Strategy",
+      13: "Government Bonds",
+      14: "Currency",
+      15: "Real Estate",
+      16: "Technology",
+      17: "Derivatives",
+      18: "Hedge Funds",
+      19: "Real Assets",
+      20: "Endowment Management",
+      21: "Secondaries",
+      22: "Volatility",
+      23: "Global Macro",
+      24: "Global Equity",
+      25: "Debt",
+      26: "Commercial Real Estate"
+    }
+
+  +b.m-interest-list
+    +b.UL.m-btn-list
+      each val, index in list
+          +e.LI.item
+            +e.A(href="#").link= val

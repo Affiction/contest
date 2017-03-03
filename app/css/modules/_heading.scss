@@ -1,0 +1,15 @@
+.m-heading {
+  color: $charcoal-grey;
+  line-height: 1;
+
+  &--md {
+    font-size: 2.4rem;
+    font-weight: bold;
+    opacity: .6;
+
+  }
+
+  &--lg {
+    font-weight: bold;
+  }
+}

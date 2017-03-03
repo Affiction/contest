@@ -24,9 +24,6 @@ gulp.task('sass', function () {
       outputStyle: 'expanded'
     }))
     .pipe(autoprefixer('last 3 version'))
-    .pipe(pixrem({
-      rootValue: '16px'
-    }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./app/css'))
     .pipe(concat('styles.css'))

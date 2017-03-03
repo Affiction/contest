@@ -1,0 +1,20 @@
+.l-sidebar {
+  padding: 0 1.5rem;
+  position: absolute;
+  top: -13.2rem;
+
+  &__avatar-wrapper {
+
+    .m-avatar {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__request-btn-wrapper {
+    border-bottom: 1px solid $white-four;;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+    text-align: center;
+  }
+}

@@ -1,0 +1,16 @@
+.m-avatar {
+  background-color: $white;
+  border: solid 4px $white;
+  border-radius: 1rem;
+  height: 26.3rem;
+  overflow: hidden;
+  width: 26.3rem;
+
+  img {
+    max-width: 100%;
+    min-height: 25.5rem;
+    min-width: 25.5rem;
+    object-fit: cover;
+
+  }
+}

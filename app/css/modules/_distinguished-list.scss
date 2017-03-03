@@ -1,0 +1,18 @@
+.m-distinguished-list {
+
+  &__item {
+    display: inline-block;
+    height: 6rem;
+    width: 6rem;
+
+    &:not(:first-child) {
+      margin-left: 2rem;
+    }
+
+    img {
+      height: 6rem;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

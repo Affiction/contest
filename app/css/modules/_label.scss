@@ -1,0 +1,26 @@
+.m-user-labels {
+
+  .label {
+    color: $white;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 1;
+    padding: .3rem .5rem;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:not(:first-child) {
+      margin-left: 1rem;
+    }
+
+    &-warning {
+      background-color: $squash;
+    }
+
+    &-primary {
+      background-color: $windows-blue;
+    }
+  }
+}

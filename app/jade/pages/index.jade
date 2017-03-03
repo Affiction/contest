@@ -1,4 +1,18 @@
 include ../bemto/bemto
 include ../blocks/index
+include ../header/_header
+include ../footer/_footer
 
++header("text")
 
+  .container-fluid
+    .row
+      +m-header-stripes
+
+  .container
+    +m-profile-cover
+
+  .container
+    +l-content-wrapper
+
+  +footer()

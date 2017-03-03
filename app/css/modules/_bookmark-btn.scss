@@ -1,0 +1,20 @@
+.m-bookmark-btn {
+  @extend .btn;
+
+  background-color: transparent;
+  border: 0;
+  color: $charcoal-grey;
+  font-family: Roboto;
+  font-size: 1.4rem;
+  line-height: normal;
+  outline: none;
+  text-align: right;
+  
+  &:hover {
+    color: $mid-blue;
+  }
+
+  i {
+    margin-right: .2rem;
+  }
+}

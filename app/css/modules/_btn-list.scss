@@ -1,0 +1,30 @@
+.m-btn-list {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+
+  &__item {
+    display: inline-block;
+    float: left;
+    margin-right: 1rem;
+  }
+
+  &__link {
+    background-color: $white;
+    border: solid 1px $white-four;
+    border-radius: 2px;
+    color: $charcoal-grey;
+    display: inline-block;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 1.6rem;
+    padding: .4rem .8rem;
+    transition: background .3s ease;
+
+    &:hover {
+      background-color: $white-two;
+      color: inherit;
+      cursor: pointer;
+    }
+  }
+}

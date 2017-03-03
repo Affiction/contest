@@ -1,0 +1,16 @@
+.l-content-wrapper {
+
+  &__sidebar {
+    float: left;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    position: relative;
+    width: 29.3rem;
+  }
+
+  &__content {
+    float: right;
+    padding-top: 3rem;
+    width: calc(100% - 29.3rem);
+  }
+}

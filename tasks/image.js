@@ -8,6 +8,6 @@ var gulp = require('gulp'),
 gulp.task('image', function () {
     gulp.src('./app/img/for-optimization/*')
       .pipe(imagemin())
-      .pipe(gulp.dest('./app/img/'))
+      .pipe(gulp.dest('./app/img/'));
   }
 );

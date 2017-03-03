@@ -1,0 +1,78 @@
+.m-card {
+  $module: &;
+
+  border: solid 1px $white-four;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  min-height: 25.6rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 25px;
+  position: relative;
+  text-align: center;
+  transition: background .3s ease;
+  width: 100%;
+
+  &-block {
+    @include clearfix();
+  }
+
+  &:hover {
+    background-color: $white-two;
+
+    #{$module}__avatar-wrapper {
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, .75);
+      transform: scale(1.03);
+    }
+  }
+
+  &__avatar-wrapper {
+    border-radius: 50%;
+    height: 8rem;
+    margin-bottom: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    transition: transform .5s ease, box-shadow .5s ease;
+    width: 8rem;
+  }
+
+  &__avatar {
+    height: 8rem;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__name {
+    color: $mid-blue;
+    font-size: 1.6rem;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 1;
+  }
+
+  &__description {
+    color: $charcoal-grey;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 5rem;
+  }
+
+  &__btn {
+    bottom: 25px;
+    color: $mid-blue;
+    font-size: 14px;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: normal;
+    left: 0;
+    letter-spacing: normal;
+    line-height: 1;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}

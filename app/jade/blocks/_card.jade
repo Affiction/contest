@@ -1,0 +1,8 @@
+mixin m-card(avatar, name, descr)
+
+  +b.m-card
+    +e.avatar-wrapper
+      +e.IMG(src= avatar).avatar
+    +e.name= name
+    +e.description= descr
+    +e.A(href="#").btn view

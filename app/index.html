@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="description" content="">
+    <meta name="description" content="">
+    <title>text</title>
+    <!-- Grid Styles-->
+    <style></style>
+    <!-- First Sections b-navigation styles-->
+    <style></style>
+    <!-- Fonts-->
+    <!--[if lt IE 9]>
+    <script src="libs/html5shiv/dist/html5shiv.js"></script><![endif]-->
+    <!-- Load CSS, CSS Localstorage & WebFonts Main Function-->
+    <script>
+      !function (e) {
+        "use strict";
+      
+        function t(e, t, n) {
+          e.addEventListener ? e.addEventListener(t, n, !1) : e.attachEvent && e.attachEvent("on" + t, n)
+        }
+      
+        function n(t, n) {
+          return e.localStorage && localStorage[t + "_content"] && localStorage[t + "_file"] === n
+        }
+      
+        function a(t, a) {
+          if (e.localStorage && e.XMLHttpRequest) n(t, a) ? o(localStorage[t + "_content"]) : l(t, a);
+          else {
+            var s = r.createElement("link");
+            s.href = a, s.id = t, s.rel = "stylesheet", s.type = "text/css", r.getElementsByTagName("head")[0].appendChild(s), r.cookie = t
+          }
+        }
+      
+        function l(e, t) {
+          var n = new XMLHttpRequest;
+          n.open("GET", t, !0), n.onreadystatechange = function () {
+            4 === n.readyState && 200 === n.status && (o(n.responseText), localStorage[e + "_content"] = n.responseText, localStorage[e + "_file"] = t)
+          }, n.send()
+        }
+      
+        function o(e) {
+          var t = r.createElement("style");
+          t.setAttribute("type", "text/css"), r.getElementsByTagName("head")[0].appendChild(t), t.styleSheet ? t.styleSheet.cssText = e : t.innerHTML = e
+        }
+      
+        var r = e.document;
+        e.loadCSS = function (e, t, n) {
+          var a, l = r.createElement("link");
+          if (t) a = t;
+          else {
+            var o;
+            o = r.querySelectorAll ? r.querySelectorAll("style,link[rel=stylesheet],script") : (r.body || r.getElementsByTagName("head")[0]).childNodes, a = o[o.length - 1]
+          }
+          var s = r.styleSheets;
+          l.rel = "stylesheet", l.href = e, l.media = "only x", a.parentNode.insertBefore(l, t ? a : a.nextSibling);
+          var c = function (e) {
+            for (var t = l.href, n = s.length; n--;)
+              if (s[n].href === t) return e();
+            setTimeout(function () {
+              c(e)
+            })
+          };
+          return l.onloadcssdefined = c, c(function () {
+            l.media = n || "all"
+          }), l
+        }, e.loadLocalStorageCSS = function (l, o) {
+          n(l, o) || r.cookie.indexOf(l) > -1 ? a(l, o) : t(e, "load", function () {
+            a(l, o)
+          })
+        }
+      }(this);
+      
+    </script>
+    <!-- Load CSS Start-->
+    <!-- script.loadCSS( "/css/header.min.css", false, "all" );
+    -->
+    <script>
+      loadCSS("libs/bootstrap/dist/css/bootstrap.min.css", false, "all");
+      loadCSS("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", false, "all");
+      loadCSS("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700", false, "all");
+      loadCSS("css/styles.min.css", false, "all");
+    </script>
+    <!-- Load CSS End-->
+    <!-- Load CSS Compilled without JS-->
+    <noscript>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/styles.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+      
+    </noscript>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="m-header-stripes">
+          <div class="m-header-stripes__item m-header-stripes__item--darken">
+          </div>
+          <div class="m-header-stripes__item m-header-stripes__item--lighter">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="m-profile-cover">
+        <button class="m-camera-btn">
+          <svg>(width="24" height="21" viewBox="0 0 24 21" xmlns="http://www.w3.org/2000/svg"><title>8FCB746B-6FC9-4158-9C36-EFADD89793AB</title><path class="camera-icon" d="M.94 20.05c.627.632 1.366.95 2.262.95h17.596c.896 0 1.635-.318 2.261-.95.628-.635.941-1.38.941-2.286V6.47a3.11 3.11 0 0 0-.94-2.285 3.08 3.08 0 0 0-2.262-.95H18l-.65-1.72c-.156-.407-.447-.769-.85-1.063C16.073.158 15.65 0 15.201 0H8.798C8.35 0 7.926.158 7.5.453c-.403.294-.694.656-.851 1.063l-.65 1.72H3.203c-.874 0-1.635.317-2.261.95A3.11 3.11 0 0 0 0 6.47v11.293c0 .905.313 1.651.94 2.285zM12 6.47c1.522 0 2.844.544 3.94 1.653 1.097 1.109 1.657 2.444 1.657 3.982 0 1.562-.56 2.896-1.657 4.005-1.096 1.11-2.418 1.653-3.94 1.653-1.545 0-2.866-.544-3.963-1.653s-1.635-2.443-1.635-4.005c0-1.538.538-2.873 1.635-3.982C9.134 7.014 10.455 6.47 12 6.47zm0 9.278c.985 0 1.835-.361 2.53-1.063.694-.702 1.052-1.562 1.052-2.58 0-.995-.358-1.855-1.053-2.557-.694-.701-1.544-1.063-2.529-1.063a3.462 3.462 0 0 0-2.552 1.063 3.522 3.522 0 0 0-1.053 2.557c0 1.018.358 1.878 1.053 2.58A3.462 3.462 0 0 0 12 15.749z" fill="#FFF" fill-rule="evenodd")</svg>
+        </button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="l-content-wrapper">
+        <div class="l-content-wrapper__sidebar">
+          <div class="row">
+            <aside class="l-sidebar m-sidebar">
+              <div class="l-sidebar__avatar-wrapper">
+                <div class="m-avatar"><img src="../../img/DP-ava.png" class="m-avatar__image" alt="" role="presentation"/>
+                </div>
+              </div>
+              <div class="l-sidebar__request-btn-wrapper m-sidebar__request">
+                <button class="btn btn--success">Request Introduction</button>
+              </div>
+              <div class="l-sidebar__quote m-sidebar__quote">
+                <div class="m-quote-sidebar">
+                  <div class="m-quote-sidebar__heading">Daniel’s Interview Quote
+                  </div>
+                  <div class="m-quote-sidebar__quote">The search for increasingly esoteric diversification parallels the search for yield in a world of persistently low interest rates.
+                  </div><a href="#" class="m-quote-sidebar__read-full">Read Full Inverview</a>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+        <div class="l-content-wrapper__content">
+          <div class="container-fluid">
+            <div class="m-box">
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="m-user-info">
+                    <h1 class="m-user-info__name">Daniel Parker
+                    </h1>
+                    <h3 class="m-user-info__job-vacancy">Deputy Chief Investment Officer
+                    </h3>
+                    <div class="m-user-info__education">Texas Tech University<span class="m-user-info__num">| AUM $1.1B</span>
+                    </div>
+                    <div class="m-user-info__location">Lubbock, Texas, USA
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 text-right">
+                  <div class="m-distinguished-list">
+                    <div class="m-distinguished-list__item"><img src="../../img/CFA-stamp.png"/>
+                    </div>
+                    <div class="m-distinguished-list__item"><img src="../../img/distinguished -stamp -v1-13.png"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="m-user-labels"><span class="label label-warning">LP</span><span class="label label-primary">PREMIUM</span><span class="label label-primary">VERIFIED</span>
+                  </div>
+                </div>
+                <div class="col-md-6 text-right">
+                  <button class="m-bookmark-btn"><i aria-hidden="true" class="fa fa-bookmark-o"></i>Bookmark
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="m-box">
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="m-heading m-heading--md">Interests</div>
+                  <div class="m-interest-list">
+                    <ul class="m-btn-list">
+                      <li class="m-btn-list__item"><a href="#" class="m-btn-list__link">Relative Value</a>
+                      </li>
+                      <li class="m-btn-list__item"><a href="#" class="m-btn-list__link">Education</a>
+                      </li>
+                      <li class="m-btn-list__item"><a href="#" class="m-btn-list__link">Emerging Markets</a>
+                      </li>
+                      <li class="m-btn-list__item"><a href="#" class="m-btn-list__link">Multi-Asset</a>
+                      </li>
+                      <li class="m-btn-list__item"><a href="#" class="m-btn-list__link">Small Cap</a>
+                      </li>
+                      <li class="m-btn-list__item"><a href="#" class="m-btn-list__link">Macro</a>
+                      </li>
+                      <li class="m-btn-list__item"><a href="#" class="m-btn-list__link">Market Neutral Arbitrage</a>
+                      </li>
+                      <li class="m-btn-list__item"><a href="#" class="m-btn-list__link">Fixed Income</a>
+                      </li>
+                      <li class="m-btn-list__item"><a href="#" class="m-btn-list__link">Emerging Managers</a>
+                      </li>
+                      <li class="m-btn-list__item"><a href="#" class="m-btn-list__link">Asset Allocation</a>
+                      </li>
+                      <li class="m-btn-list__item"><a href="#" class="m-btn-list__link">Asset Allocation</a>
+                      </li>
+                      <li class="m-btn-list__item"><a href="#" class="m-btn-list__link">Multi-Strategy</a>
+                      </li>
+                      <li class="m-btn-list__item"><a href="#" class="m-btn-list__link">Government Bonds</a>
+                      </li>
+                      <li class="m-btn-list__item"><a href="#" class="m-btn-list__link">Currency</a>
+                      </li>
+                      <li class="m-btn-list__item"><a href="#" class="m-btn-list__link">Real Estate</a>
+                      </li>
+                      <li class="m-btn-list__item"><a href="#" class="m-btn-list__link">Technology</a>
+                      </li>
+                      <li class="m-btn-list__item"><a href="#" class="m-btn-list__link">Derivatives</a>
+                      </li>
+                      <li class="m-btn-list__item"><a href="#" class="m-btn-list__link">Hedge Funds</a>
+                      </li>
+                      <li class="m-btn-list__item"><a href="#" class="m-btn-list__link">Real Assets</a>
+                      </li>
+                      <li class="m-btn-list__item"><a href="#" class="m-btn-list__link">Endowment Management</a>
+                      </li>
+                      <li class="m-btn-list__item"><a href="#" class="m-btn-list__link">Secondaries</a>
+                      </li>
+                      <li class="m-btn-list__item"><a href="#" class="m-btn-list__link">Volatility</a>
+                      </li>
+                      <li class="m-btn-list__item"><a href="#" class="m-btn-list__link">Global Macro</a>
+                      </li>
+                      <li class="m-btn-list__item"><a href="#" class="m-btn-list__link">Global Equity</a>
+                      </li>
+                      <li class="m-btn-list__item"><a href="#" class="m-btn-list__link">Debt</a>
+                      </li>
+                      <li class="m-btn-list__item"><a href="#" class="m-btn-list__link">Commercial Real Estate</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="m-heading m-heading--md">Geographies</div>
+                  <div class="m-geography-list">
+                    <ul class="m-btn-list">
+                      <li class="m-btn-list__item"><a href="#" class="m-btn-list__link">North America</a>
+                      </li>
+                      <li class="m-btn-list__item"><a href="#" class="m-btn-list__link">Latin America</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="m-box">
+              <div class="m-mutural-contacts">
+                <div class="m-mutural-contacts__heading">
+                  <div class="m-heading m-heading--md">Mutual Contacts</div>
+                </div>
+                <div class="m-mutural-contacts__contact-cards">
+                  <div class="row">
+                    <div class="m-card-block">
+                      <div class="col-md-3">
+                        <div class="m-card">
+                          <div class="m-card__avatar-wrapper"><img src="../../img/DP-ava.png" class="m-card__avatar" alt="" role="presentation"/>
+                          </div>
+                          <div class="m-card__name">Dan Parker
+                          </div>
+                          <div class="m-card__description">Institutional Investor
+                          </div><a href="#" class="m-card__btn">view</a>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="m-card">
+                          <div class="m-card__avatar-wrapper"><img src="../../img/BK-icon.png" class="m-card__avatar" alt="" role="presentation"/>
+                          </div>
+                          <div class="m-card__name">Brian King
+                          </div>
+                          <div class="m-card__description">Institutional Investor in the United States
+                          </div><a href="#" class="m-card__btn">view</a>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="m-card">
+                          <div class="m-card__avatar-wrapper"><img src="../../img/TB-ava.png" class="m-card__avatar" alt="" role="presentation"/>
+                          </div>
+                          <div class="m-card__name">Tim Barrett, CFA
+                          </div>
+                          <div class="m-card__description">Institutional Investor in the United States
+                          </div><a href="#" class="m-card__btn">view</a>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="m-card">
+                          <div class="m-card__avatar-wrapper"><img src="../../img/JF-ava.png" class="m-card__avatar" alt="" role="presentation"/>
+                          </div>
+                          <div class="m-card__name">Joshua Fenton
+                          </div>
+                          <div class="m-card__description">Fund Manager at Alpha Strategies Investment Consalting
+                          </div><a href="#" class="m-card__btn">view</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="m-mutural-contacts__btn">
+                  <button class="btn btn--default">View More</button>
+                </div>
+              </div>
+            </div>
+            <div class="m-box">
+              <div class="m-heading m-heading--md">Expiriense</div>
+              <div class="m-expiriense">
+                <div class="media">
+                  <div class="media-left media-top"><a href="#"><img src="../../img/TTU-logo.png" class="media-object"/></a></div>
+                  <div class="media-body"><span class="media-info">2016 — Present, Austin, Texas Area</span>
+                    <h4 class="media-heading">Deputy Chief Investment Officer</h4>
+                    <h5 class="media-sub-heading">Texas Tech University</h5>
+                    <p>Multi-asset class global investor with experience across all asset classes and geographies at an endowment, a foundation, a premier asset management firm and a bulge bracket investment bank. Significant leadership experience making critical decisions in complex, rapidly changing environments as a Marine Corps officer. Versatile, proactive, high-achieving leader with extensive international experience.</p>
+                  </div>
+                </div>
+                <div class="media">
+                  <div class="media-left media-top"><a href="#"><img src="../../img/HCT-logo.png" class="media-object"/></a></div>
+                  <div class="media-body"><span class="media-info">2009 — 2016, New York City</span>
+                    <h4 class="media-heading">Investment Officer</h4>
+                    <h5 class="media-sub-heading">Leona M. and Harry B. Helmsley Charitable Trust</h5>
+                    <p>Senior investment team member for a ~$5.5B US foundation with a globally diversified, multi-asset class portfolio.</p>
+                    <p>Direct responsibility for allocating and monitoring $2.6B (funded) in 53 funds with 26 managers ($3.4B committed); manager coverage is 81% alternative investments (HF, PE, VC) and 19% long-only equity/fixed income.</p>
+                    <p>Led execution of private equity co-investments and secondary transactions as well as anchoring a new hedge fund.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Load Scripts-->
+    <script>
+      var scr = {
+        "scripts": [{
+          "src": "http://code.jquery.com/jquery-1.11.0.min.js",
+          "async": false
+        }, {
+          "src": "js/common.js",
+          "async": false
+        }]
+      };
+      !function (t, n, r) {
+        "use strict";
+        var c = function (t) {
+          if ("[object Array]" !== Object.prototype.toString.call(t)) return !1;
+          for (var r = 0; r < t.length; r++) {
+            var c = n.createElement("script"),
+                    e = t[r];
+            c.src = e.src, c.async = e.async, n.body.appendChild(c)
+          }
+          return !0
+        };
+        t.addEventListener ? t.addEventListener("load", function () {
+          c(r.scripts);
+        }, !1) : t.attachEvent ? t.attachEvent("onload", function () {
+          c(r.scripts)
+        }) : t.onload = function () {
+          c(r.scripts)
+        }
+      }(window, document, scr);
+    </script>
+  </body>
+</html>

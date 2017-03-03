@@ -2,12 +2,14 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  font-size: rem(16);
+html {
+  font-size: 62.5%;
 }
 
 body {
+  background-color: $white-two;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
 }
 
 img {

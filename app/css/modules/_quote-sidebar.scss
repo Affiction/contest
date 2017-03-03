@@ -1,0 +1,67 @@
+.m-quote-sidebar {
+  border-bottom: 1px solid $white-four;
+  padding-bottom: 3rem;
+
+  &__heading {
+    color: $greyish;
+    font-family: HelveticaNeue;
+    font-size: 1rem;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    padding-bottom: 1.5rem;
+    padding-top: 3rem;
+    text-transform: uppercase;
+  }
+
+  &__quote {
+    color: $charcoal-grey;
+    font-size: 2rem;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 10;
+
+    &::before,
+    &::after {
+      background-size: cover;
+      content: '';
+      display: block;
+      height: 68px;
+      position: absolute;
+      width: 91px;
+      z-index: -1;
+    }
+
+    &::before {
+      background-image: url('../../img/icon-quote-start.png');
+      left: 0;
+      top: 0;
+
+      @include image-2x('../../img/icon-quote-start@2x.png');
+    }
+
+    &::after {
+      background-image: url('../../img/icon-quote-end.png');
+      bottom: 0;
+      right: 0;
+
+      @include image-2x('../../img/icon-quote-end@2x.png');
+    }
+  }
+
+  &__read-full {
+    color: $mid-blue;
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: normal;
+    line-height: 1.13;
+
+  }
+}

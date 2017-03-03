@@ -1,0 +1,9 @@
+.m-box {
+  @include clearfix();
+
+  background-color: $white;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px 0 rgba(31, 54, 77, .25);
+  margin-bottom: 1.5rem;
+  padding: 3rem 3.4rem 4rem;
+}

@@ -1,0 +1,44 @@
+mixin l-content-wrapper
+
+  +b.l-content-wrapper
+    +e.sidebar
+      .row
+        +m-sidebar
+
+    +e.content
+      .container-fluid
+        .m-box
+          .row
+            .col-md-8
+              +m-user-info
+            .col-md-4.text-right
+              +m-distinguished-list
+          .row
+            .col-md-6
+              +m-user-labels
+            .col-md-6.text-right
+              +m-bookmark-btn
+
+        .m-box
+          .row
+            .col-md-8
+              .m-heading.m-heading--md Interests
+              +m-interest-list
+            .col-md-4
+              .m-heading.m-heading--md Geographies
+              +m-geography-list
+
+        .m-box
+          +b.m-mutural-contacts
+            +e.heading
+              .m-heading.m-heading--md Mutual Contacts
+            +e.contact-cards
+              .row
+                +m-card-block
+            +e.btn
+              button.btn.btn--default View More
+
+        .m-box
+          .m-heading.m-heading--md Expiriense
+          +m-expiriense
+

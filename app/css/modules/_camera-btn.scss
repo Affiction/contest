@@ -1,0 +1,41 @@
+.m-camera-btn {
+  background-color: $charcoal-grey;
+  border-color: transparent;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: row;
+  height: 3.4rem;
+  justify-content: center;
+  opacity: .7;
+  outline: none;
+  transition: opacity .3s ease;
+  width: 4.4rem;
+
+  &:hover {
+    opacity: 1;
+
+    .camera-icon {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    .camera-icon {
+      opacity: .5;
+    }
+  }
+
+  svg {
+    height: 2.1rem;
+    width: 2.4rem;
+  }
+
+  .camera-icon {
+    color: $white;
+    opacity: .6;
+    transition: opacity .3s ease;
+  }
+
+  &:hover {
+  }
+}
